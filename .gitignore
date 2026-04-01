@@ -1,0 +1,29 @@
+# Claude Code / sessões
+.claude/
+.mcp.json
+
+# Node
+node_modules/
+package-lock.json
+
+# Temporários
+*.tmp
+*.tmp.*
+
+# Fontes (licenciadas, não redistribuir)
+fonts/
+
+# Blender backups
+*.blend1
+
+# After Effects auto-save
+output/after-effects/Adobe After Effects Auto-Save/
+
+# Arquivos grandes — usar GitHub Releases
+output/midias/*.mp4
+output/midias/*.mov
+output/finais/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "name": "thespace-pixelmap",
+  "version": "1.0.0",
+  "description": "Gerador de pixel map — The Space / ADA",
+  "scripts": {
+    "dev": "node scripts/server.js",
+    "gerar": "node scripts/gerar-pixelmap.js"
+  },
+  "dependencies": {
+    "@fontsource/fira-code": "^5.2.7",
+    "archiver": "^7.0.1",
+    "express": "^5.2.1",
+    "sharp": "^0.33.4"
+  }
+}
