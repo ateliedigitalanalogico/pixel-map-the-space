@@ -15,7 +15,7 @@ const ROOT  = path.join(__dirname, '..');
 const OWNER = 'ateliedigitalanalogico';
 const REPO  = 'pixel-map-the-space';
 const TAG   = 'v1.1';
-const ASSET_NAME = `thespace-pixelmap-projeto-completo-${TAG}.zip`;
+const ASSET_NAME = 'thespace-pixelmap-projeto-completo.zip'; // nome fixo → link direto sempre funciona
 const ZIP_PATH   = path.join(ROOT, 'output', ASSET_NAME);
 
 // ── Pasta do Collect Files ─────────────────────────────────────
@@ -114,12 +114,14 @@ async function main() {
     archive.on('error', reject);
     archive.pipe(out);
 
+    const ROOT_FOLDER = `thespace-pixelmap-${TAG}`;
+
     // Pasta coletada pelo AE (caminhos já relativos, auto-contida)
-    archive.directory(AE_COLLECTED, 'after-effects');
+    archive.directory(AE_COLLECTED, `${ROOT_FOLDER}/after-effects`);
 
     // Cena Blender
     if (fs.existsSync(BLENDER_FILE)) {
-      archive.file(BLENDER_FILE, { name: 'blender/the_space_preview.blend' });
+      archive.file(BLENDER_FILE, { name: `${ROOT_FOLDER}/blender/the_space_preview.blend` });
     } else {
       console.warn('  não encontrado: blender/the_space_preview.blend');
     }
