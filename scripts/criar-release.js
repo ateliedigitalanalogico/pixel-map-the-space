@@ -15,7 +15,7 @@ const ROOT  = path.join(__dirname, '..');
 const OWNER = 'ateliedigitalanalogico';
 const REPO  = 'pixel-map-the-space';
 const TAG   = 'v1.1';
-const ASSET_NAME = 'thespace-pixelmap-projeto-completo.zip';
+const ASSET_NAME = `thespace-pixelmap-projeto-completo-${TAG}.zip`;
 const ZIP_PATH   = path.join(ROOT, 'output', ASSET_NAME);
 
 // ── Pasta do Collect Files ─────────────────────────────────────
